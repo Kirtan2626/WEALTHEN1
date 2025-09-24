@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financify - AI Personal Financial Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-700">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">
+                <span class="text-blue-600">Financify</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-gray-600 hover:text-blue-600">Services</a>
+                <a href="#insights" class="text-gray-600 hover:text-blue-600">AI Insights</a>
+                <a href="#dashboard" class="text-gray-600 hover:text-blue-600">Dashboard</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600">About Us</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-blue-600">Testimonials</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+            </nav>
+            <a href="#contact" class="hidden md:block px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                Get Started
+            </a>
+            <button id="mobile-menu-button" class="md:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle mobile menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#services" class="block py-2 text-gray-600 hover:text-blue-600">Services</a>
+            <a href="#insights" class="block py-2 text-gray-600 hover:text-blue-600">AI Insights</a>
+             <a href="#dashboard" class="block py-2 text-gray-600 hover:text-blue-600">Dashboard</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">About Us</a>
+            <a href="#testimonials" class="block py-2 text-gray-600 hover:text-blue-600">Testimonials</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
+            <a href="#contact" class="block mt-2 w-full text-center px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Get Started</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-gradient text-white">
+            <div class="container mx-auto px-6 py-20 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Secure Your Financial Future with AI</h1>
+                <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">Expert advice and personalized strategies to help you achieve your wealth management goals.</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#contact" class="cta-button">Book a Consultation</a>
+                    <a href="#services" class="secondary-cta-button">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">We offer a comprehensive suite of financial services tailored to your unique needs.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Wealth Management</h3>
+                        <p class="text-gray-600 flex-grow">Holistic strategies to grow and protect your assets for the long term.</p>
+                        <a href="#portfolio-advisor" class="text-blue-600 font-semibold mt-4 inline-block hover:underline">Try our AI Advisor &rarr;</a>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M12 6v-1m0-1V4m0 2.01v-2.01m-3.333-1.333A3.001 3.001 0 0112 2.01m0 14.002V18m0 2.01v-2.01m-3.333-1.333A3.001 3.001 0 0112 16.01m0-14.002V2m0 14.002a3.001 3.001 0 01-2.667-1.333M5.333 7.333A3.001 3.001 0 018 4.01m8 14.002a3.001 3.001 0 01-2.667 1.333M5.333 16.667A3.001 3.001 0 018 19.99m8-14.002a3.001 3.001 0 012.667 1.333M18.667 16.667A3.001 3.001 0 0116 19.99m0-14.002V4m0 14.002V18"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Investment Planning</h3>
+                        <p class="text-gray-600">Customized investment portfolios designed to meet your risk tolerance and goals.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                           <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Retirement Planning</h3>
+                        <p class="text-gray-600">Prepare for a comfortable retirement with our expert guidance and forecasting.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Account Aggregation</h3>
+                        <p class="text-gray-600">Securely link all your bank accounts for a complete view of your finances in one place.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Holistic Asset Management</h3>
+                        <p class="text-gray-600">Track your assets, loans, and mortgages to get a clear picture of your net worth.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                           <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Economic Insights</h3>
+                        <p class="text-gray-600">Understand the impact of inflation and purchasing power on your personal savings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="insights" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">✨ AI-Powered Financial Insights</h2>
+                <p class="section-subtitle">Leverage the power of AI for up-to-date market summaries and personalized retirement advice. Powered by Gemini.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Daily Market News Summary</h3>
+                        <p class="text-gray-600 mb-6">Get a concise, AI-generated summary of today's top financial news to stay informed. Uses Google Search for real-time data.</p>
+                        <button id="get-summary-btn" class="w-full cta-button">✨ Get Today's Market Summary</button>
+                        <div id="summary-loader" class="hidden mx-auto my-6 loader"></div>
+                        <div id="summary-output" class="mt-6 p-4 bg-gray-100 rounded-lg text-gray-700 whitespace-pre-wrap hidden"></div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">AI Retirement Advisor</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label for="current-age" class="block text-sm font-medium text-gray-700">Current Age</label>
+                                <input type="number" id="current-age" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="30">
+                            </div>
+                            <div>
+                                <label for="retirement-age" class="block text-sm font-medium text-gray-700">Retirement Age</label>
+                                <input type="number" id="retirement-age" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="65">
+                            </div>
+                             <div>
+                                <label for="current-savings" class="block text-sm font-medium text-gray-700">Current Savings ($)</label>
+                                <input type="number" id="current-savings" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="50000">
+                            </div>
+                            <div>
+                                <label for="monthly-contrib" class="block text-sm font-medium text-gray-700">Monthly Contribution ($)</label>
+                                <input type="number" id="monthly-contrib" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="500">
+                            </div>
+                        </div>
+                        <button id="calculate-btn" class="w-full secondary-cta-button mb-4 bg-gray-700 text-white hover:bg-gray-800">Calculate Savings</button>
+                        <div id="calculation-output" class="text-center font-semibold text-lg text-gray-800 mb-4"></div>
+                        <div id="chart-container" class="mt-4 hidden">
+                            <canvas id="retirement-chart"></canvas>
+                        </div>
+                        <button id="get-advice-btn" class="w-full cta-button hidden">✨ Get AI Retirement Advice</button>
+                        <div id="advice-loader" class="hidden mx-auto my-6 loader"></div>
+                        <div id="advice-output" class="mt-6 p-4 bg-blue-50 rounded-lg text-gray-700 whitespace-pre-wrap hidden"></div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg shadow-lg lg:col-span-2">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">AI Goal-Based Savings Planner</h3>
+                        <p class="text-gray-600 mb-6">Describe your financial goal, and our AI will generate a personalized savings plan to help you get there.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label for="financial-goal" class="block text-sm font-medium text-gray-700">Financial Goal</label>
+                                <input type="text" id="financial-goal" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="e.g., Down payment for a house">
+                            </div>
+                            <div>
+                                <label for="target-amount" class="block text-sm font-medium text-gray-700">Target Amount ($)</label>
+                                <input type="number" id="target-amount" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="20000">
+                            </div>
+                             <div>
+                                <label for="timeframe" class="block text-sm font-medium text-gray-700">Timeframe (Years)</label>
+                                <input type="number" id="timeframe" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="5">
+                            </div>
+                            <div>
+                                <label for="goal-current-savings" class="block text-sm font-medium text-gray-700">Current Savings for this Goal ($)</label>
+                                <input type="number" id="goal-current-savings" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="1000">
+                            </div>
+                        </div>
+                        <button id="get-plan-btn" class="w-full cta-button">✨ Generate Savings Plan</button>
+                        <div id="plan-loader" class="hidden mx-auto my-6 loader"></div>
+                        <div id="plan-output" class="mt-6 p-4 bg-green-50 rounded-lg text-gray-700 whitespace-pre-wrap hidden"></div>
+                    </div>
+
+                    <div id="portfolio-advisor" class="bg-white p-8 rounded-lg shadow-lg lg:col-span-2">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">AI Wealth Management Portfolio Advisor</h3>
+                        <p class="text-gray-600 mb-6">Get a sample investment portfolio suggestion based on your risk tolerance and financial goals, tailored for the Indian market.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+                            <div>
+                                <label for="investment-amount" class="block text-sm font-medium text-gray-700">Investment Amount (₹)</label>
+                                <input type="number" id="investment-amount" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="500000">
+                            </div>
+                            <div>
+                                <label for="investment-horizon" class="block text-sm font-medium text-gray-700">Investment Horizon (Years)</label>
+                                <input type="number" id="investment-horizon" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="10">
+                            </div>
+                            <div>
+                                <label for="risk-tolerance" class="block text-sm font-medium text-gray-700">Risk Tolerance</label>
+                                <select id="risk-tolerance" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                    <option>Conservative</option>
+                                    <option selected>Moderate</option>
+                                    <option>Aggressive</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button id="get-portfolio-btn" class="w-full cta-button">✨ Generate Portfolio Suggestion</button>
+                        <div id="portfolio-loader" class="hidden mx-auto my-6 loader"></div>
+                        <div id="portfolio-output" class="mt-6 p-4 bg-indigo-50 rounded-lg text-gray-700 whitespace-pre-wrap hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dashboard" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">📊 Your Financial Dashboard</h2>
+                <p class="section-subtitle">Connect your accounts and track your assets to get a real-time, comprehensive view of your financial health.</p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-1 bg-gray-50 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Connected Accounts</h3>
+                        <div class="space-y-3 mb-6">
+                           <div id="account-list" class="space-y-3">
+                                <p class="text-gray-500">No accounts connected yet.</p>
+                           </div>
+                        </div>
+                        <div class="space-y-4">
+                            <input type="text" id="account-name" placeholder="Account Name (e.g., HDFC Savings)" class="w-full rounded-md border-gray-300 shadow-sm">
+                            <input type="number" id="account-balance" placeholder="Current Balance (₹)" class="w-full rounded-md border-gray-300 shadow-sm">
+                            <button id="add-account-btn" class="w-full cta-button">Add Account</button>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-2 bg-gray-50 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Net Worth Overview</h3>
+                           <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 rounded-md mb-6" role="alert">
+                                <p class="font-bold">Your Estimated Net Worth is:</p>
+                                <p id="net-worth-output" class="text-3xl font-bold">₹0.00</p>
+                            </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div>
+                                <label for="total-savings" class="block text-sm font-medium text-gray-700">Total Savings (₹)</label>
+                                <input type="number" id="total-savings" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-200" placeholder="0" readonly>
+                            </div>
+                             <div>
+                                <label for="loan-liabilities" class="block text-sm font-medium text-gray-700">Loan Liabilities (₹)</label>
+                                <input type="number" id="loan-liabilities" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" placeholder="100000">
+                            </div>
+                            <div>
+                                <label for="mortgage-liabilities" class="block text-sm font-medium text-gray-700">Mortgage (₹)</label>
+                                <input type="number" id="mortgage-liabilities" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" placeholder="2500000">
+                            </div>
+                        </div>
+                        
+                         <div class="mt-8 border-t pt-6">
+                            <h4 class="text-xl font-semibold text-gray-800 mb-4">AI Economic Analysis</h4>
+                            <p class="text-gray-600 mb-4">Analyze your total savings against real-world economic factors.</p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <button id="inflation-btn" class="flex-1 secondary-cta-button bg-gray-700 text-white hover:bg-gray-800">Analyze Inflation Impact</button>
+                                <button id="ppp-btn" class="flex-1 secondary-cta-button bg-gray-700 text-white hover:bg-gray-800">Explain Purchasing Power</button>
+                            </div>
+                            <div id="economic-loader" class="hidden mx-auto my-6 loader"></div>
+                            <div id="economic-output" class="mt-6 p-4 bg-blue-50 rounded-lg text-gray-700 whitespace-pre-wrap hidden"></div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-3 bg-gray-50 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">AI Expense Tracker & Budgeting Assistant</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-700 mb-3">Log Your Expenses</h4>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                                       <input type="text" id="expense-desc" placeholder="Expense Description" class="block w-full rounded-md border-gray-300 shadow-sm">
+                                     <input type="number" id="expense-amount" placeholder="Amount (₹)" class="block w-full rounded-md border-gray-300 shadow-sm">
+                                     <select id="expense-category" class="block w-full rounded-md border-gray-300 shadow-sm">
+                                        <option>Food</option>
+                                        <option>Transport</option>
+                                        <option>Utilities</option>
+                                        <option>Shopping</option>
+                                        <option>Entertainment</option>
+                                        <option>Other</option>
+                                    </select>
+                                     <button id="add-expense-btn" class="w-full cta-button">Add Expense</button>
+                                </div>
+                                 <div id="expense-list" class="mt-4 space-y-2 max-h-60 overflow-y-auto pr-2">
+                                     <p class="text-gray-500">Your logged expenses will appear here.</p>
+                                </div>
+                            </div>
+                            <div>
+                                 <h4 class="text-lg font-semibold text-gray-700 mb-3">Budget Analysis</h4>
+                                 <div class="bg-white p-4 rounded-lg shadow-inner mb-4">
+                                     <p class="text-gray-600">Total Expenses:</p>
+                                     <p id="total-expenses-output" class="text-2xl font-bold text-red-600">₹0.00</p>
+                                 </div>
+                                 <p class="text-gray-600 mb-4">Get personalized tips on how to manage your spending and improve your budget.</p>
+                                 <button id="analyze-expenses-btn" class="w-full cta-button">✨ Analyze My Spending</button>
+                                 <div id="expense-analysis-loader" class="hidden mx-auto my-6 loader"></div>
+                                 <div id="expense-analysis-output" class="mt-6 p-4 bg-green-50 rounded-lg text-gray-700 whitespace-pre-wrap hidden"></div>
+                                 
+                                 <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-3 border-t pt-4">🧠 Your Financial Habits Insight</h4>
+                                 <button id="get-behavioral-btn" class="w-full secondary-cta-button bg-purple-600 text-white hover:bg-purple-700">Get Behavioral Coach Tips</button>
+                                 <div id="behavioral-loader" class="hidden mx-auto my-6 loader"></div>
+                                 <div id="behavioral-output" class="mt-6 p-4 bg-purple-50 rounded-lg text-gray-700 whitespace-pre-wrap hidden"></div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-3 bg-gray-50 p-8 rounded-lg shadow-lg mt-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">💰 AI Predictive Tax Optimization (Section 80C)</h3>
+                        <p class="text-gray-600 mb-4">Optimize your tax savings for the current financial year based on your contributions.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4" x-data="{ limit: 150000 }">
+                            <div>
+                                <label for="current-tax-contrib" class="block text-sm font-medium text-gray-700">Current 80C Contributions (₹)</label>
+                                <input type="number" id="current-tax-contrib" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" placeholder="50000" value="50000">
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="tax-goals" class="block text-sm font-medium text-gray-700">Any specific tax-saving goals?</label>
+                                <input type="text" id="tax-goals" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" placeholder="e.g., I want to prioritize ELSS.">
+                            </div>
+                        </div>
+                        <button id="get-tax-plan-btn" class="w-full cta-button">✨ Generate Tax Strategy</button>
+                        <div id="tax-plan-loader" class="hidden mx-auto my-6 loader"></div>
+                        <div id="tax-plan-output" class="mt-6 p-4 bg-yellow-50 rounded-lg text-gray-700 whitespace-pre-wrap hidden"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Our+Team" alt="Financial planning meeting" class="rounded-lg shadow-2xl">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Your Trusted Financial Partner</h2>
+                        <p class="mb-4">At Financify, we believe that solid financial planning is the key to a secure future. Our team of certified financial advisors brings decades of experience to the table, offering personalized, transparent, and objective advice.</p>
+                        <p>We are committed to understanding your unique situation and building a lasting relationship based on trust and integrity. Let us help you navigate the complexities of the financial world.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">We are proud of the relationships we've built and the success we've helped create.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <p class="italic text-gray-600 mb-6">"Working with Financify was a game-changer for our family's financial future. Their team is knowledgeable, patient, and truly cares about their clients' success. We finally have a clear roadmap!"</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/48x48/e0e7ff/3730a3?text=JS" alt="Jane Smith" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-semibold text-gray-800">Jane Smith</p>
+                                <p class="text-sm text-gray-500">Business Owner</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <p class="italic text-gray-600 mb-6">"The level of personalized attention I received was outstanding. They took the time to understand my goals and built a portfolio that perfectly matches my needs. I couldn't be happier with the results."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/48x48/e0e7ff/3730a3?text=MD" alt="Mark Davis" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-semibold text-gray-800">Mark Davis</p>
+                                <p class="text-sm text-gray-500">Retired Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-blue-700 text-white">
+            <div class="container mx-auto px-6 py-16 text-center">
+                <h2 class="text-3xl font-bold mb-4">Ready to Take Control of Your Finances?</h2>
+                <p class="text-blue-100 mb-8 max-w-2xl mx-auto">Schedule a free, no-obligation consultation with one of our expert advisors today.</p>
+                <a href="#contact" class="px-8 py-4 bg-white text-blue-700 font-bold rounded-lg shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-105 duration-300">
+                    Schedule Your Free Consultation
+                </a>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer id="contact" class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4"><span class="text-blue-400">Financify</span></h3>
+                    <p class="text-gray-400">Your partner in financial growth.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#services" class="hover:text-blue-400">Services</a></li>
+                        <li class="mb-2"><a href="#insights" class="hover:text-blue-400">AI Insights</a></li>
+                         <li class="mb-2"><a href="#dashboard" class="hover:text-blue-400">Dashboard</a></li>
+                        <li class="mb-2"><a href="#about" class="hover:text-blue-400">About Us</a></li>
+                        <li class="mb-2"><a href="#testimonials" class="hover:text-blue-400">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact Us</h4>
+                    <p class="text-gray-400 mb-2">123 Finance Street, Suite 100<br>New York, NY 10001</p>
+                    <p class="text-gray-400 mb-2">contact@financify.com</p>
+                    <p class="text-gray-400">(123) 456-7890</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.35C0 23.41.59 24 1.325 24H12.82v-9.29H9.69v-3.62h3.13V8.41c0-3.1 1.89-4.79 4.66-4.79 1.32 0 2.46.1 2.79.14v3.24h-1.92c-1.5 0-1.79.71-1.79 1.76v2.31h3.59l-.47 3.62h-3.12V24h5.78c.74 0 1.34-.59 1.34-1.32V1.32C24 .59 23.42 0 22.675 0z"></path></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.223.085c.645 1.956 2.523 3.379 4.74 3.419a9.87 9.87 0 01-6.117 2.107c-.397 0-.79-.023-1.175-.068a13.963 13.963 0 007.548 2.212c9.058 0 14.01-7.502 14.01-14.013 0-.213-.005-.426-.015-.637a10.034 10.034 0 002.457-2.54z"></path></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400 text-sm">
+                &copy; 2025 Financify. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</body>
+</html>
