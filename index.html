@@ -3,11 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financify - AI Personal Financial Management</title>
+    <title>Financify - Your Partner in Financial Growth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* A very light gray background */
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .section-title {
+            @apply text-3xl font-bold text-gray-800 text-center mb-2;
+        }
+        .section-subtitle {
+            @apply text-center text-gray-500 mb-12 max-w-2xl mx-auto;
+        }
+        .cta-button {
+            @apply px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-transform transform hover:scale-105 duration-300;
+        }
+        .secondary-cta-button {
+            @apply px-6 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300 transition-transform transform hover:scale-105 duration-300;
+        }
+        /* Spinner for loading state */
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3b82f6;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body class="text-gray-700">
 
@@ -27,7 +61,7 @@
             <a href="#contact" class="hidden md:block px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
                 Get Started
             </a>
-            <button id="mobile-menu-button" class="md:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle mobile menu">
+            <button id="mobile-menu-button" class="md:hidden">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
@@ -45,7 +79,7 @@
     <main>
         <section class="hero-gradient text-white">
             <div class="container mx-auto px-6 py-20 md:py-32 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Secure Your Financial Future with AI</h1>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Secure Your Financial Future</h1>
                 <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">Expert advice and personalized strategies to help you achieve your wealth management goals.</p>
                 <div class="flex justify-center space-x-4">
                     <a href="#contact" class="cta-button">Book a Consultation</a>
@@ -75,13 +109,13 @@
                         <p class="text-gray-600">Customized investment portfolios designed to meet your risk tolerance and goals.</p>
                     </div>
                     <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                           <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                         <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-800 mb-3">Retirement Planning</h3>
                         <p class="text-gray-600">Prepare for a comfortable retirement with our expert guidance and forecasting.</p>
                     </div>
-                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                     <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                         <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                         </div>
@@ -96,8 +130,8 @@
                         <p class="text-gray-600">Track your assets, loans, and mortgages to get a clear picture of your net worth.</p>
                     </div>
                     <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                           <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                         <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-800 mb-3">Economic Insights</h3>
                         <p class="text-gray-600">Understand the impact of inflation and purchasing power on your personal savings.</p>
@@ -113,7 +147,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <div class="bg-white p-8 rounded-lg shadow-lg">
                         <h3 class="text-2xl font-semibold text-gray-800 mb-4">Daily Market News Summary</h3>
-                        <p class="text-gray-600 mb-6">Get a concise, AI-generated summary of today's top financial news to stay informed. Uses Google Search for real-time data.</p>
+                        <p class="text-gray-600 mb-6">Get a concise, AI-generated summary of today's top financial news to stay informed.</p>
                         <button id="get-summary-btn" class="w-full cta-button">✨ Get Today's Market Summary</button>
                         <div id="summary-loader" class="hidden mx-auto my-6 loader"></div>
                         <div id="summary-output" class="mt-6 p-4 bg-gray-100 rounded-lg text-gray-700 whitespace-pre-wrap hidden"></div>
@@ -140,10 +174,7 @@
                             </div>
                         </div>
                         <button id="calculate-btn" class="w-full secondary-cta-button mb-4 bg-gray-700 text-white hover:bg-gray-800">Calculate Savings</button>
-                        <div id="calculation-output" class="text-center font-semibold text-lg text-gray-800 mb-4"></div>
-                        <div id="chart-container" class="mt-4 hidden">
-                            <canvas id="retirement-chart"></canvas>
-                        </div>
+                        <div id="calculation-output" class="text-center font-semibold text-xl text-gray-800 mb-4"></div>
                         <button id="get-advice-btn" class="w-full cta-button hidden">✨ Get AI Retirement Advice</button>
                         <div id="advice-loader" class="hidden mx-auto my-6 loader"></div>
                         <div id="advice-output" class="mt-6 p-4 bg-blue-50 rounded-lg text-gray-700 whitespace-pre-wrap hidden"></div>
@@ -226,14 +257,14 @@
 
                     <div class="lg:col-span-2 bg-gray-50 p-8 rounded-lg shadow-lg">
                         <h3 class="text-2xl font-semibold text-gray-800 mb-4">Net Worth Overview</h3>
-                           <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 rounded-md mb-6" role="alert">
-                                <p class="font-bold">Your Estimated Net Worth is:</p>
-                                <p id="net-worth-output" class="text-3xl font-bold">₹0.00</p>
-                            </div>
+                         <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 rounded-md mb-6" role="alert">
+                            <p class="font-bold">Your Estimated Net Worth is:</p>
+                            <p id="net-worth-output" class="text-3xl font-bold">₹0.00</p>
+                        </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div>
                                 <label for="total-savings" class="block text-sm font-medium text-gray-700">Total Savings (₹)</label>
-                                <input type="number" id="total-savings" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-200" placeholder="0" readonly>
+                                <input type="number" id="total-savings" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" placeholder="500000" readonly>
                             </div>
                              <div>
                                 <label for="loan-liabilities" class="block text-sm font-medium text-gray-700">Loan Liabilities (₹)</label>
@@ -246,14 +277,14 @@
                         </div>
                         
                          <div class="mt-8 border-t pt-6">
-                            <h4 class="text-xl font-semibold text-gray-800 mb-4">AI Economic Analysis</h4>
-                            <p class="text-gray-600 mb-4">Analyze your total savings against real-world economic factors.</p>
-                            <div class="flex flex-col sm:flex-row gap-4">
-                                <button id="inflation-btn" class="flex-1 secondary-cta-button bg-gray-700 text-white hover:bg-gray-800">Analyze Inflation Impact</button>
-                                <button id="ppp-btn" class="flex-1 secondary-cta-button bg-gray-700 text-white hover:bg-gray-800">Explain Purchasing Power</button>
-                            </div>
-                            <div id="economic-loader" class="hidden mx-auto my-6 loader"></div>
-                            <div id="economic-output" class="mt-6 p-4 bg-blue-50 rounded-lg text-gray-700 whitespace-pre-wrap hidden"></div>
+                             <h4 class="text-xl font-semibold text-gray-800 mb-4">AI Economic Analysis</h4>
+                             <p class="text-gray-600 mb-4">Analyze your total savings against real-world economic factors.</p>
+                             <div class="flex flex-col sm:flex-row gap-4">
+                                 <button id="inflation-btn" class="flex-1 secondary-cta-button bg-gray-700 text-white hover:bg-gray-800">Analyze Inflation Impact</button>
+                                 <button id="ppp-btn" class="flex-1 secondary-cta-button bg-gray-700 text-white hover:bg-gray-800">Explain Purchasing Power</button>
+                             </div>
+                             <div id="economic-loader" class="hidden mx-auto my-6 loader"></div>
+                             <div id="economic-output" class="mt-6 p-4 bg-blue-50 rounded-lg text-gray-700 whitespace-pre-wrap hidden"></div>
                         </div>
                     </div>
 
@@ -263,9 +294,9 @@
                             <div>
                                 <h4 class="text-lg font-semibold text-gray-700 mb-3">Log Your Expenses</h4>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                                       <input type="text" id="expense-desc" placeholder="Expense Description" class="block w-full rounded-md border-gray-300 shadow-sm">
-                                     <input type="number" id="expense-amount" placeholder="Amount (₹)" class="block w-full rounded-md border-gray-300 shadow-sm">
-                                     <select id="expense-category" class="block w-full rounded-md border-gray-300 shadow-sm">
+                                     <input type="text" id="expense-desc" placeholder="Expense Description" class="block w-full rounded-md border-gray-300 shadow-sm">
+                                    <input type="number" id="expense-amount" placeholder="Amount (₹)" class="block w-full rounded-md border-gray-300 shadow-sm">
+                                    <select id="expense-category" class="block w-full rounded-md border-gray-300 shadow-sm">
                                         <option>Food</option>
                                         <option>Transport</option>
                                         <option>Utilities</option>
@@ -273,10 +304,10 @@
                                         <option>Entertainment</option>
                                         <option>Other</option>
                                     </select>
-                                     <button id="add-expense-btn" class="w-full cta-button">Add Expense</button>
+                                    <button id="add-expense-btn" class="w-full cta-button">Add Expense</button>
                                 </div>
-                                 <div id="expense-list" class="mt-4 space-y-2 max-h-60 overflow-y-auto pr-2">
-                                     <p class="text-gray-500">Your logged expenses will appear here.</p>
+                                <div id="expense-list" class="mt-4 space-y-2 max-h-60 overflow-y-auto pr-2">
+                                    <p class="text-gray-500">Your logged expenses will appear here.</p>
                                 </div>
                             </div>
                             <div>
@@ -289,34 +320,9 @@
                                  <button id="analyze-expenses-btn" class="w-full cta-button">✨ Analyze My Spending</button>
                                  <div id="expense-analysis-loader" class="hidden mx-auto my-6 loader"></div>
                                  <div id="expense-analysis-output" class="mt-6 p-4 bg-green-50 rounded-lg text-gray-700 whitespace-pre-wrap hidden"></div>
-                                 
-                                 <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-3 border-t pt-4">🧠 Your Financial Habits Insight</h4>
-                                 <button id="get-behavioral-btn" class="w-full secondary-cta-button bg-purple-600 text-white hover:bg-purple-700">Get Behavioral Coach Tips</button>
-                                 <div id="behavioral-loader" class="hidden mx-auto my-6 loader"></div>
-                                 <div id="behavioral-output" class="mt-6 p-4 bg-purple-50 rounded-lg text-gray-700 whitespace-pre-wrap hidden"></div>
-
                             </div>
                         </div>
                     </div>
-
-                    <div class="lg:col-span-3 bg-gray-50 p-8 rounded-lg shadow-lg mt-8">
-                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">💰 AI Predictive Tax Optimization (Section 80C)</h3>
-                        <p class="text-gray-600 mb-4">Optimize your tax savings for the current financial year based on your contributions.</p>
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4" x-data="{ limit: 150000 }">
-                            <div>
-                                <label for="current-tax-contrib" class="block text-sm font-medium text-gray-700">Current 80C Contributions (₹)</label>
-                                <input type="number" id="current-tax-contrib" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" placeholder="50000" value="50000">
-                            </div>
-                            <div class="sm:col-span-2">
-                                <label for="tax-goals" class="block text-sm font-medium text-gray-700">Any specific tax-saving goals?</label>
-                                <input type="text" id="tax-goals" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" placeholder="e.g., I want to prioritize ELSS.">
-                            </div>
-                        </div>
-                        <button id="get-tax-plan-btn" class="w-full cta-button">✨ Generate Tax Strategy</button>
-                        <div id="tax-plan-loader" class="hidden mx-auto my-6 loader"></div>
-                        <div id="tax-plan-output" class="mt-6 p-4 bg-yellow-50 rounded-lg text-gray-700 whitespace-pre-wrap hidden"></div>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -415,9 +421,434 @@
         </div>
     </footer>
 
-    <script type="module" src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        // Simple mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Gemini API Integration
+        const getSummaryBtn = document.getElementById('get-summary-btn');
+        const summaryLoader = document.getElementById('summary-loader');
+        const summaryOutput = document.getElementById('summary-output');
+
+        const calculateBtn = document.getElementById('calculate-btn');
+        const getAdviceBtn = document.getElementById('get-advice-btn');
+        const adviceLoader = document.getElementById('advice-loader');
+        const adviceOutput = document.getElementById('advice-output');
+        const calculationOutput = document.getElementById('calculation-output');
+
+        const getPlanBtn = document.getElementById('get-plan-btn');
+        const planLoader = document.getElementById('plan-loader');
+        const planOutput = document.getElementById('plan-output');
+
+        const getPortfolioBtn = document.getElementById('get-portfolio-btn');
+        const portfolioLoader = document.getElementById('portfolio-loader');
+        const portfolioOutput = document.getElementById('portfolio-output');
+
+        const addAccountBtn = document.getElementById('add-account-btn');
+        const accountList = document.getElementById('account-list');
+        const totalSavingsInput = document.getElementById('total-savings');
+        const loanInput = document.getElementById('loan-liabilities');
+        const mortgageInput = document.getElementById('mortgage-liabilities');
+        const netWorthOutput = document.getElementById('net-worth-output');
+
+        const inflationBtn = document.getElementById('inflation-btn');
+        const pppBtn = document.getElementById('ppp-btn');
+        const economicLoader = document.getElementById('economic-loader');
+        const economicOutput = document.getElementById('economic-output');
+
+        const addExpenseBtn = document.getElementById('add-expense-btn');
+        const expenseList = document.getElementById('expense-list');
+        const totalExpensesOutput = document.getElementById('total-expenses-output');
+        const analyzeExpensesBtn = document.getElementById('analyze-expenses-btn');
+        const expenseAnalysisLoader = document.getElementById('expense-analysis-loader');
+        const expenseAnalysisOutput = document.getElementById('expense-analysis-output');
+
+        let accounts = [];
+        let totalSavings = 0;
+        let expenses = [];
+        let totalExpenses = 0;
+
+        const apiKey = ""; // Canvas will provide the key
+        const apiUrl = https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey};
+
+        // Generic function to call Gemini API with exponential backoff
+        async function callGeminiAPI(payload, maxRetries = 3) {
+            let attempt = 0;
+            while (attempt < maxRetries) {
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(HTTP error! status: ${response.status});
+                    }
+                    
+                    const result = await response.json();
+                    const candidate = result.candidates?.[0];
+
+                    if (candidate && candidate.content?.parts?.[0]?.text) {
+                        return candidate.content.parts[0].text;
+                    } else {
+                        throw new Error("Invalid response structure from API.");
+                    }
+                } catch (error) {
+                    console.error(Attempt ${attempt + 1} failed:, error);
+                    attempt++;
+                    if (attempt >= maxRetries) {
+                        return "Sorry, there was an error fetching the AI response. Please try again later.";
+                    }
+                    const delay = Math.pow(2, attempt) * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+        }
+
+        // Market News Summary Feature
+        getSummaryBtn.addEventListener('click', async () => {
+            summaryLoader.classList.remove('hidden');
+            summaryOutput.classList.add('hidden');
+            getSummaryBtn.disabled = true;
+
+            const userQuery = "Summarize the top 5 most important financial and market news headlines from the last 24 hours for India. Present it as a concise, easy-to-read summary for a non-expert investor.";
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                tools: [{ "google_search": {} }],
+            };
+
+            const summaryText = await callGeminiAPI(payload);
+            
+            summaryOutput.textContent = summaryText;
+            summaryLoader.classList.add('hidden');
+            summaryOutput.classList.remove('hidden');
+            getSummaryBtn.disabled = false;
+        });
+
+        // Retirement Advisor Feature
+        let retirementData = {};
+
+        calculateBtn.addEventListener('click', () => {
+            const currentAge = parseInt(document.getElementById('current-age').value, 10);
+            const retirementAge = parseInt(document.getElementById('retirement-age').value, 10);
+            const currentSavings = parseFloat(document.getElementById('current-savings').value, 10);
+            const monthlyContrib = parseFloat(document.getElementById('monthly-contrib').value, 10);
+
+            if (isNaN(currentAge) || isNaN(retirementAge) || isNaN(currentSavings) || isNaN(monthlyContrib) || currentAge >= retirementAge) {
+                calculationOutput.textContent = "Please enter valid numbers and ensure current age is less than retirement age.";
+                getAdviceBtn.classList.add('hidden');
+                return;
+            }
+
+            const yearsToGrow = retirementAge - currentAge;
+            const monthsToGrow = yearsToGrow * 12;
+            const annualRate = 0.07; // Assumed average annual return
+            const monthlyRate = annualRate / 12;
+            
+            // Future value of current savings
+            const fvOfCurrentSavings = currentSavings * Math.pow((1 + monthlyRate), monthsToGrow);
+            
+            // Future value of monthly contributions (annuity)
+            const fvOfContributions = monthlyContrib * ((Math.pow((1 + monthlyRate), monthsToGrow) - 1) / monthlyRate);
+
+            const totalSavings = fvOfCurrentSavings + fvOfContributions;
+            
+            retirementData = { currentAge, retirementAge, currentSavings, monthlyContrib, totalSavings };
+
+            calculationOutput.innerHTML = Estimated retirement savings: <span class="text-blue-600">$${totalSavings.toLocaleString('en-US', {maximumFractionDigits: 0})}</span>;
+            getAdviceBtn.classList.remove('hidden');
+            adviceOutput.classList.add('hidden');
+        });
+
+        getAdviceBtn.addEventListener('click', async () => {
+            adviceLoader.classList.remove('hidden');
+            adviceOutput.classList.add('hidden');
+            getAdviceBtn.disabled = true;
+
+            const userQuery = `I am planning for retirement. Here is my information:
+            - Current Age: ${retirementData.currentAge}
+            - Target Retirement Age: ${retirementData.retirementAge}
+            - Current Savings: $${retirementData.currentSavings.toLocaleString()}
+            - Monthly Contribution: $${retirementData.monthlyContrib.toLocaleString()}
+            - My estimated retirement savings will be $${retirementData.totalSavings.toLocaleString('en-US', {maximumFractionDigits: 0})}.
+            
+            Based on this, provide some personalized, actionable retirement planning advice in a few paragraphs. The tone should be encouraging and professional. Do not just repeat the numbers I gave you. Focus on potential strategies and next steps.`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+            };
+            
+            const adviceText = await callGeminiAPI(payload);
+
+            adviceOutput.textContent = adviceText;
+            adviceLoader.classList.add('hidden');
+            adviceOutput.classList.remove('hidden');
+            getAdviceBtn.disabled = false;
+        });
+
+        // Goal-Based Savings Planner
+        getPlanBtn.addEventListener('click', async () => {
+            const goal = document.getElementById('financial-goal').value;
+            const targetAmount = parseFloat(document.getElementById('target-amount').value);
+            const timeframe = parseInt(document.getElementById('timeframe').value, 10);
+            const currentSavings = parseFloat(document.getElementById('goal-current-savings').value);
+
+            if (!goal || isNaN(targetAmount) || isNaN(timeframe) || isNaN(currentSavings)) {
+                planOutput.textContent = "Please fill out all fields with valid information.";
+                planOutput.classList.remove('hidden');
+                return;
+            }
+
+            planLoader.classList.remove('hidden');
+            planOutput.classList.add('hidden');
+            getPlanBtn.disabled = true;
+
+            const userQuery = `Act as an expert financial advisor. A user wants to achieve a financial goal. Here is their information:
+            - Financial Goal: ${goal}
+            - Target Amount: $${targetAmount.toLocaleString()}
+            - Timeframe: ${timeframe} years
+            - Current Savings for this goal: $${currentSavings.toLocaleString()}
+
+            Create a practical, encouraging, and step-by-step savings plan for them. The plan should include:
+            1. A calculation of how much they need to save monthly.
+            2. Suggestions on specific types of accounts to use for saving (e.g., High-Yield Savings Account for short-term goals, a mix of ETFs/Index Funds for longer-term goals), explaining why.
+            3. Actionable tips on how to reach their monthly savings target.
+            4. An encouraging closing statement.
+            
+            The tone should be professional, clear, and motivational. Format the response for easy readability.`;
+            
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+            };
+            
+            const planText = await callGeminiAPI(payload);
+
+            planOutput.textContent = planText;
+            planLoader.classList.add('hidden');
+            planOutput.classList.remove('hidden');
+            getPlanBtn.disabled = false;
+        });
+
+        // AI Portfolio Advisor
+        getPortfolioBtn.addEventListener('click', async () => {
+            const amount = parseFloat(document.getElementById('investment-amount').value);
+            const horizon = parseInt(document.getElementById('investment-horizon').value, 10);
+            const risk = document.getElementById('risk-tolerance').value;
+
+            if (isNaN(amount) || isNaN(horizon) || !risk) {
+                portfolioOutput.textContent = "Please fill out all fields with valid information.";
+                portfolioOutput.classList.remove('hidden');
+                return;
+            }
+
+            portfolioLoader.classList.remove('hidden');
+            portfolioOutput.classList.add('hidden');
+            getPortfolioBtn.disabled = true;
+
+            const userQuery = `Act as an expert financial advisor specializing in the Indian market. A user wants a sample investment portfolio based on their profile. Here is their information:
+- Investment Amount: ₹${amount.toLocaleString('en-IN')}
+- Risk Tolerance: ${risk}
+- Investment Horizon: ${horizon} years
+
+Based on this, create a diversified model portfolio suggestion suitable for the Indian context. Please provide:
+1.  A percentage allocation for different asset classes (e.g., Indian Equities - Large Cap, Mid Cap; Debt Instruments - Government Bonds, Corporate Bonds; Gold; etc.).
+2.  Specific examples of well-known investment instruments for each asset class (like specific ETFs or top-rated mutual funds available in India).
+3.  A brief rationale for why this portfolio is suitable for the user's risk profile and horizon.
+
+The tone should be professional and educational. Include a clear disclaimer that this is a sample portfolio for informational purposes and not direct financial advice. Format the response for clarity with headings and bullet points.`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                tools: [{ "google_search": {} }],
+            };
+
+            const portfolioText = await callGeminiAPI(payload);
+
+            portfolioOutput.textContent = portfolioText;
+            portfolioLoader.classList.add('hidden');
+            portfolioOutput.classList.remove('hidden');
+            getPortfolioBtn.disabled = false;
+        });
+
+
+        // Financial Dashboard Logic
+        function updateDashboard() {
+            // Update Account List
+            if (accounts.length === 0) {
+                 accountList.innerHTML = <p class="text-gray-500">No accounts connected yet.</p>;
+            } else {
+                accountList.innerHTML = '';
+                totalSavings = 0;
+                accounts.forEach(acc => {
+                    const accountEl = document.createElement('div');
+                    accountEl.className = 'bg-white p-3 rounded-lg shadow flex justify-between items-center';
+                    accountEl.innerHTML = `
+                        <div>
+                            <p class="font-semibold text-gray-800">${acc.name}</p>
+                            <p class="text-green-600 font-mono">₹${acc.balance.toLocaleString('en-IN')}</p>
+                        </div>
+                    `;
+                    accountList.appendChild(accountEl);
+                    totalSavings += acc.balance;
+                });
+            }
+            
+            // Update Total Savings and Net Worth
+            totalSavingsInput.value = totalSavings;
+            calculateNetWorth();
+        }
+
+        function calculateNetWorth() {
+             const loans = parseFloat(loanInput.value) || 0;
+             const mortgage = parseFloat(mortgageInput.value) || 0;
+             const netWorth = totalSavings - loans - mortgage;
+             netWorthOutput.textContent = ₹${netWorth.toLocaleString('en-IN')};
+        }
+
+        addAccountBtn.addEventListener('click', () => {
+            const accName = document.getElementById('account-name').value;
+            const accBalance = parseFloat(document.getElementById('account-balance').value);
+
+            if (accName && !isNaN(accBalance)) {
+                accounts.push({ name: accName, balance: accBalance });
+                document.getElementById('account-name').value = '';
+                document.getElementById('account-balance').value = '';
+                updateDashboard();
+            }
+        });
+
+        loanInput.addEventListener('input', calculateNetWorth);
+        mortgageInput.addEventListener('input', calculateNetWorth);
+
+        // AI Economic Analysis buttons
+        inflationBtn.addEventListener('click', async () => {
+            if (totalSavings <= 0) {
+                economicOutput.textContent = "Please add savings to your accounts to analyze the impact of inflation.";
+                economicOutput.classList.remove('hidden');
+                return;
+            }
+            economicLoader.classList.remove('hidden');
+            economicOutput.classList.add('hidden');
+            inflationBtn.disabled = true;
+            pppBtn.disabled = true;
+
+            const userQuery = `Act as an Indian financial analyst. A user has total savings of ₹${totalSavings.toLocaleString('en-IN')}. 
+            1. Explain briefly and simply what inflation is in the Indian context.
+            2. Using the current approximate annual inflation rate in India, calculate the projected real value of their savings in 5 years if the money is just kept in a low-yield savings account.
+            3. Provide 2-3 actionable strategies to counteract inflation's effect on their savings.
+            The tone should be informative and empowering.`;
+
+            const payload = { contents: [{ parts: [{ text: userQuery }] }], tools: [{"google_search": {}}] };
+            const analysisText = await callGeminiAPI(payload);
+
+            economicOutput.innerHTML = analysisText.replace(/\n/g, '<br>');
+            economicLoader.classList.add('hidden');
+            economicOutput.classList.remove('hidden');
+            inflationBtn.disabled = false;
+            pppBtn.disabled = false;
+        });
+
+        pppBtn.addEventListener('click', async () => {
+             if (totalSavings <= 0) {
+                economicOutput.textContent = "Please add savings to your accounts to analyze purchasing power.";
+                economicOutput.classList.remove('hidden');
+                return;
+            }
+            economicLoader.classList.remove('hidden');
+            economicOutput.classList.add('hidden');
+            inflationBtn.disabled = true;
+            pppBtn.disabled = true;
+
+            const userQuery = `Act as an Indian economist. A user has total savings of ₹${totalSavings.toLocaleString('en-IN')}.
+            1. Explain the concept of Purchasing Power Parity (PPP) in very simple terms.
+            2. Using the latest available PPP exchange rate between India (INR) and the United States (USD), explain what the user's savings would be worth in the U.S. in terms of purchasing power.
+            3. Briefly clarify why this PPP value is different from the market exchange rate.
+            The tone should be educational and easy to understand.`;
+
+            const payload = { contents: [{ parts: [{ text: userQuery }] }], tools: [{"google_search": {}}] };
+            const analysisText = await callGeminiAPI(payload);
+
+            economicOutput.innerHTML = analysisText.replace(/\n/g, '<br>');
+            economicLoader.classList.add('hidden');
+            economicOutput.classList.remove('hidden');
+            inflationBtn.disabled = false;
+            pppBtn.disabled = false;
+        });
+
+        // Expense Tracker Logic
+        function updateExpenseDashboard() {
+            if (expenses.length === 0) {
+                expenseList.innerHTML = <p class="text-gray-500">Your logged expenses will appear here.</p>;
+            } else {
+                expenseList.innerHTML = '';
+                totalExpenses = 0;
+                expenses.forEach(exp => {
+                    const expenseEl = document.createElement('div');
+                    expenseEl.className = 'bg-white p-2 rounded-md shadow-sm flex justify-between items-center';
+                    expenseEl.innerHTML = `
+                        <div>
+                            <p class="font-medium text-gray-800">${exp.desc}</p>
+                            <p class="text-xs text-gray-500">${exp.category}</p>
+                        </div>
+                        <p class="font-mono text-red-500">₹${exp.amount.toLocaleString('en-IN')}</p>
+                    `;
+                    expenseList.appendChild(expenseEl);
+                    totalExpenses += exp.amount;
+                });
+            }
+            totalExpensesOutput.textContent = ₹${totalExpenses.toLocaleString('en-IN')};
+        }
+
+        addExpenseBtn.addEventListener('click', () => {
+            const desc = document.getElementById('expense-desc').value;
+            const amount = parseFloat(document.getElementById('expense-amount').value);
+            const category = document.getElementById('expense-category').value;
+
+            if (desc && !isNaN(amount) && category) {
+                expenses.push({ desc, amount, category });
+                document.getElementById('expense-desc').value = '';
+                document.getElementById('expense-amount').value = '';
+                updateExpenseDashboard();
+            }
+        });
+
+        analyzeExpensesBtn.addEventListener('click', async () => {
+            if (expenses.length < 3) {
+                expenseAnalysisOutput.textContent = "Please log at least 3 expenses to get a meaningful analysis.";
+                expenseAnalysisOutput.classList.remove('hidden');
+                return;
+            }
+
+            expenseAnalysisLoader.classList.remove('hidden');
+            expenseAnalysisOutput.classList.add('hidden');
+            analyzeExpensesBtn.disabled = true;
+
+            const expenseDataString = expenses.map(e => - ${e.category}: ₹${e.amount} (${e.desc})).join('\n');
+            const userQuery = `Act as a helpful budgeting assistant for a user in India. Here is a list of their recent expenses:\n${expenseDataString}\n\nTheir total spending is ₹${totalExpenses.toLocaleString('en-IN')}.
+            
+            Please analyze this spending. Identify the largest spending category and provide 2-3 practical and encouraging tips for how they could potentially save money in that area. The tone should be helpful and non-judgmental.`;
+
+            const payload = { contents: [{ parts: [{ text: userQuery }] }] };
+            const analysisText = await callGeminiAPI(payload);
+
+            expenseAnalysisOutput.textContent = analysisText;
+            expenseAnalysisLoader.classList.add('hidden');
+            expenseAnalysisOutput.classList.remove('hidden');
+            analyzeExpensesBtn.disabled = false;
+        });
+
+
+        // Initial call to set up dashboards
+        updateDashboard();
+        updateExpenseDashboard();
+
+    </script>
 
 </body>
 </html>
