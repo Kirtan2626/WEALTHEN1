@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Financify</title>
+    <meta name="description" content="Login or create an account to access your Financify dashboard.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen">
+
+    <div class="w-full max-w-md p-8 space-y-8 bg-white rounded-2xl shadow-lg border border-gray-200">
+        
+        <!-- Login Form -->
+        <div id="login-form">
+            <div class="text-center">
+                <a href="index.html" class="text-3xl font-bold text-gray-800">
+                    <span class="text-blue-600">Financify</span>
+                </a>
+                <h2 class="mt-4 text-2xl font-semibold text-gray-900">
+                    Sign in
+                </h2>
+                <p class="mt-2 text-sm text-gray-600">
+                    to continue to your account
+                </p>
+            </div>
+            <form class="mt-8 space-y-6" action="#" method="POST">
+                <div class="rounded-md shadow-sm -space-y-px">
+                    <div>
+                        <label for="login-email" class="sr-only">Email address</label>
+                        <input id="login-email" name="email" type="email" autocomplete="email" required class="appearance-none rounded-md relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" placeholder="Email address">
+                    </div>
+                     <div class="pt-4">
+                        <label for="login-password" class="sr-only">Password</label>
+                        <input id="login-password" name="password" type="password" autocomplete="current-password" required class="appearance-none rounded-md relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" placeholder="Password">
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div class="text-sm">
+                        <a href="#" class="font-medium text-blue-600 hover:text-blue-500">
+                            Forgot your password?
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Sign in
+                    </button>
+                </div>
+                 <div class="text-center text-sm">
+                    <p class="text-gray-600">
+                        Don't have an account?
+                        <button type="button" id="show-signup" class="font-medium text-blue-600 hover:text-blue-500">
+                            Create account
+                        </button>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signup-form" class="hidden">
+             <div class="text-center">
+                <a href="index.html" class="text-3xl font-bold text-gray-800">
+                    <span class="text-blue-600">Financify</span>
+                </a>
+                <h2 class="mt-4 text-2xl font-semibold text-gray-900">
+                    Create your account
+                </h2>
+                <p class="mt-2 text-sm text-gray-600">
+                    to get started with Financify
+                </p>
+            </div>
+             <form class="mt-8 space-y-4" action="#" method="POST">
+                <div>
+                    <label for="signup-name" class="sr-only">Full Name</label>
+                    <input id="signup-name" name="name" type="text" autocomplete="name" required class="appearance-none rounded-md relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Full Name">
+                </div>
+                <div>
+                    <label for="signup-email" class="sr-only">Email address</label>
+                    <input id="signup-email" name="email" type="email" autocomplete="email" required class="appearance-none rounded-md relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Email address">
+                </div>
+                <div>
+                    <label for="signup-password" class="sr-only">Password</label>
+                    <input id="signup-password" name="password" type="password" autocomplete="new-password" required class="appearance-none rounded-md relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Password">
+                </div>
+                 <div>
+                    <label for="confirm-password" class="sr-only">Confirm Password</label>
+                    <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" required class="appearance-none rounded-md relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Confirm Password">
+                </div>
+
+                <div>
+                    <button type="submit" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Create Account
+                    </button>
+                </div>
+                 <div class="text-center text-sm">
+                    <p class="text-gray-600">
+                        Already have an account?
+                        <button type="button" id="show-login" class="font-medium text-blue-600 hover:text-blue-500">
+                            Sign in instead
+                        </button>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const showSignupBtn = document.getElementById('show-signup');
+        const showLoginBtn = document.getElementById('show-login');
+
+        showSignupBtn.addEventListener('click', () => {
+            loginForm.classList.add('hidden');
+            signupForm.classList.remove('hidden');
+        });
+
+        showLoginBtn.addEventListener('click', () => {
+            signupForm.classList.add('hidden');
+            loginForm.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
